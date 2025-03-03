@@ -2,8 +2,6 @@
 
 A secure and efficient platform that enables citizens to report crimes and assists law enforcement agencies in tracking and managing cases.
 
-![Crime Reporting Web Portal](https://your-image-link-here)  
-
 The **Crime Reporting Web Portal** provides a streamlined system for citizens to report crimes, track case statuses, and enhance public safety. Law enforcement officers can manage cases efficiently, analyze crime trends, and improve decision-making.
 
 ## Features of the Crime Reporting Web Portal:
@@ -32,14 +30,3 @@ The **Crime Reporting Web Portal** provides a streamlined system for citizens to
 - **Authentication:** Firebase Auth / JWT
 - **Hosting:** AWS / Firebase / DigitalOcean
 - **Mapping & Visualization:** OpenStreetMap / Mapbox / Chart.js
-
-## Team Members that contributed to this Project:
-- [Your Name](https://github.com/your-github)
-- [Contributor 2](https://github.com/contributor2)
-- [Contributor 3](https://github.com/contributor3)
-- [Contributor 4](https://github.com/contributor4)
-
----
-
-Let me know if you want any further modifications! 🚀  
-Also, replace `![Crime Reporting Web Portal](https://your-image-link-here)` with your actual image URL.
