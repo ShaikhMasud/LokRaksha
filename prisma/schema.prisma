@@ -1,0 +1,74 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String
+  phone     String?
+  district  String
+  role      Role     @default(CITIZEN)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  reports   Report[]
+}
+
+model Report {
+  id          String   @id @default(uuid())
+  type        String
+  description String
+  location    String
+  date        DateTime
+  status      Status   @default(PENDING)
+  severity    Severity
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  actions     Action[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Action {
+  id          String   @id @default(uuid())
+  description String
+  reportId    String
+  report      Report   @relation(fields: [reportId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model CrimeHotspot {
+  id        String   @id @default(uuid())
+  latitude  Float
+  longitude Float
+  crimeType String
+  intensity Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum Role {
+  CITIZEN
+  POLICE
+  ADMIN
+}
+
+enum Status {
+  PENDING
+  INVESTIGATING
+  RESOLVED
+  CLOSED
+}
+
+enum Severity {
+  LOW
+  MEDIUM
+  HIGH
+}
