@@ -1,4 +1,4 @@
-# Crime Reporting Web Portal
+# 👮‍♂️Crime Reporting Web Portal
 
 A secure and efficient platform that enables citizens to report crimes and assists law enforcement agencies in tracking and managing cases.
 
